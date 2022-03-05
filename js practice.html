@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Practice</title>
+</head>
+
+<body>
+    <h1>Javascript Practice</h1>
+    <p id="demo"></p>
+
+    <script>
+
+        /* function addTwoNumber(x, y) {
+             let sum = x + y;
+             return sum;
+         }
+ 
+         console.log(addTwoNumber(24, 56));*/
+
+
+        /*const person = {
+            firstname: "Iqbal",
+            lastname: "Hasan",
+            age: 23
+        };
+
+        console.log(person.firstname + " " + person.lastname);
+        console.log(person["age"]);*/
+
+        /*var name = window.prompt("Enter your name: ")
+        console.log(name);*/
+
+        /* var cgpa = prompt("Please enter your cgpa"); // for take user input
+        console.log(cgpa);*/
+
+        /*
+        var element = prompt("Enter number of element: ");
+        var numbers = [];
+
+        //take user input
+        for (let i = 0; i < element; i++) {
+            numbers[i] = prompt("Enter a number");
+        }
+
+        //console.log(numbers)
+        console.log(typeof (numbers));
+        console.log(typeof (numbers[1]));
+
+        //display element
+        console.log("Numbers are:")
+        var totalsum = 0;
+        for (let i = 0; i < element; i++) {
+            totalsum = totalsum + parseInt(numbers[i]);
+            console.log(numbers[i]);
+        }
+        console.log("the sum is : " + totalsum);
+        */
+
+        /*
+        let arr = [23, 110, 45, 12, 67, 34, 23, 105, 90];
+        console.log(arr.length);
+        console.log(arr.lastIndexOf(23));
+        console.log(arr.includes(67));
+        console.log(typeof (arr[2]));
+        console.log(arr[2] + arr[1]);
+        console.log("sorted array : " + arr.sort(function (a, b) { return a - b }));
+
+        let fruits = ["mango", "apple", "banana", "orange", "nuts"];
+        fruits.pop(); //nuts
+        console.log(fruits);
+        fruits.push("coconuts");
+        console.log(fruits);
+        */
+
+
+        /*
+        let numbers = [45, 4, 9, 34, 12, 2];
+        let numbers2 = [];
+        numbers.forEach(myFunction);
+
+        function myFunction(value) {
+            if (value > 10) {
+                numbers2 = numbers2 + value + "\n";
+            }
+        }
+        console.log("Greater than 10 : \n" + numbers2);
+
+
+
+        const numbers3 = [45, 4, 9, 16, 25];
+        const numbers4 = numbers3.map(myFunction2);
+
+        function myFunction2(value, index, array) {
+            return value * 2;
+        }
+        console.log("Doubled the number: " + numbers4);
+
+        */
+
+        /* const person = { fname: "John", lname: "Doe", age: 25 };
+         let text = "";
+         for (let x in person) {
+             text += person[x] + " ";
+         }
+         console.log(text);
+ 
+ 
+ 
+         const numbers = [45, 4, 9, 16, 25];
+         let txt = "";
+         numbers.forEach(myFunction);
+ 
+         function myFunction(value, index) {
+             txt += index + " => " + value + "\n";
+         }
+         console.log(txt);
+ 
+         for (let x of numbers) {
+             console.log(x);
+         }*/
+
+
+        const myInfo = {
+            name: "Md Ikbal Hosen",
+            age: "22",
+            cgpa: 3.70,
+            versity: "BUBT",
+            skill: [{
+                language: "HTML CSS JS React",
+                versioncontrol: "Git Github"
+            },
+            {
+                language: "Bootstrap SASS",
+                versioncontrol: "Docker"
+            }]
+        }
+
+        /*console.log(myInfo.name + " " + myInfo.cgpa);
+        console.log(myInfo.skill);
+        console.log(myInfo["skill"]);
+        console.log(myInfo.skill.language) */
+        console.log(myInfo["skill"][1]["versioncontrol"]);
+
+        for (let x in myInfo) {
+            console.log(myInfo[x]);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

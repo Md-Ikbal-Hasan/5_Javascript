@@ -1,0 +1,17 @@
+{
+    "person": [
+
+        { "name": "Iqbal", "age": 23, "hometown": "Cumilla" },
+        { "name": "sunny", "age": 24, "hometown": "jassor" },
+        { "name": "alhaj", "age": 22, "hometown": "rajbari" },
+        { "name": "aminul", "age": 21, "hometown": "tangail" },
+        { "name": "imran", "age": 25, "hometown": "noakhali" }
+    ],
+    "job-status": [
+        { "job_title": "Web developer", "salary": "35000" },
+        { "job_title": "designer", "salary": "30000" },
+        { "job_title": "hacker", "salary": "350000" },
+        { "job_title": "publisher", "salary": "30000" },
+        { "job_title": "maintenance", "salary": "32000" }
+    ]
+}

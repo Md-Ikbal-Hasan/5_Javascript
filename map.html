@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myMap = new Map(
+            [
+                ['first key', 10],
+                ['second key', 'ikbal'],
+                ['third key', 20],
+
+            ]
+        );
+
+        myMap.set('fourth key', 'shaon')
+        console.log(myMap);
+        console.log(myMap.get('second key'));
+        console.log(myMap.has('third key'));
+        console.log(myMap.size);
+
+
+        for (let x of myMap) {
+            console.log(x)
+        }
+
+        for (let x of myMap.values()) { //values() ,  keys()
+            console.log("values :" + x)
+        }
+
+        for (let [x, y] of myMap) {
+            console.log("Key : value => " + x, y)
+        }
+
+        myMap.forEach((val, key) => {
+            console.log(val, key)
+        });
+
+
+        let arr = Array.from(myMap); // convert map into array...
+        console.log(arr);
+
+        let arr2 = Array.from(myMap.values());
+        console.log(arr2);
+    </script>
+</body>
+
+</html>

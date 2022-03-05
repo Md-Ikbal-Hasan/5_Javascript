@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback and higher order Function</title>
+</head>
+
+<body>
+
+    <script>
+        /* function square(x) {
+                     console.log(`square of ${x} : ${x * x}`);
+                 }
+                 //const y = square;
+                 // y(9);
+                 function higherOrderFunction(num, callback) {
+                     callback(num);
+                 }
+                 higherOrderFunction(6, square); */
+
+
+
+
+        const taskOne = (callback) => {
+            console.log("Task1 function");
+            callback();
+        };
+
+        const taskTwo = (callback) => {
+            setTimeout(() => {
+                console.log("Task2 . Data loading");
+                callback();
+            }, 3000);
+
+
+        };
+
+        const taskThree = (callback) => {
+            console.log("Task3 function");
+            callback();
+        };
+
+        const taskFour = (callback) => {
+            console.log("Task4 function");
+            callback();
+        };
+
+        const taskFive = () => {
+            console.log("Task5 function");
+        };
+
+        //calling.....
+        taskOne(function f1() {
+            taskTwo(function f2() {
+                taskThree(function f3() {
+                    taskFour(function f5() {
+                        taskFive();
+                    })
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

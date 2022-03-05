@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RG EXp meta character</title>
+</head>
+
+<body>
+    <script>
+        let re;
+        let str;
+        //Literal ccharacter.....
+        re = /hello/;
+        re = /hello/i;
+
+
+        // Meta character......
+        re = /^hello/i; // must start with 
+        re = /world$/i; // must end with 
+        re = /^hello$/; // must start and end with 
+        re = /^h.llo$/ //matches any one character
+        re = /h.llo/ //matches any one character
+        re = /h*llo/ // 0 or more times
+        re = /he?llo/; //optional  
+        re = /hello\?/; //escape
+
+        str = "hello world";
+        console.log(re.exec(str));
+
+
+        str = "Again hello world";
+        str = "hello hello";
+        str = "hello";
+        str = "hallo";
+        str = "hello world";
+        str = "hillo";
+        str = 'hijgsdfsfllo';
+        str = "hello";
+        str = "hllo";
+        str = "hallo";
+        str = "hello?";
+
+
+
+        reTest(re, str);
+
+        function reTest(re, str) {
+            if (re.test(str)) {
+                console.log(` '${str}'  matches '${re.source}'`);
+            } else {
+                console.log(`${str} doesn't match ${re.source}`);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

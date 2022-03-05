@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("Arrow Function.....");
+
+        /* function hello(name) {
+             console.log("Hello " , name);
+         }
+         hello("Iqbal"); */
+
+        // arrow function 
+        let hello = (name) => {
+            console.log(`Hello ${name} Welcome.`);
+        }
+        hello("Iqbal");
+
+        // curly braces can be avoided whene there is single statement
+        let test = () => console.log("Hello test");
+        test();
+
+        //parenthesis can be avoided when there is single parameter
+        let test2 = name => console.log("Hello", name);
+        test2("Dreamer");
+
+        let test3 = name => {
+            console.log(name);
+            console.log("Welcome");
+        }
+        test3("Rahim")
+
+        let test4 = (name, id) => console.log(name, id);
+        test4("karim", 317);
+
+        let getSquare = num => {
+            return num * num;
+        }
+        console.log(getSquare(4));
+
+        let getSquare2 = num => num * num; // it will return num*num........
+        console.log(getSquare2(5));
+    </script>
+
+
+</body>
+
+</html>

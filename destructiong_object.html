@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let person = {
+            firstName: "Ikbal",
+            lastName: "Hasan",
+            dob: "15-01-1999"
+        }
+
+        /*  let {
+              firstName,
+              lastName,
+              dob
+          } = person;
+          console.log(firstName, lastName, dob);*/
+
+        let {
+            firstName: fname,
+            lastName: lname,
+            dob
+        } = person;
+        console.log(fname, lname, dob);
+
+
+        function display({
+            firstName: fname,
+            lastName: lname,
+            dob
+        }) {
+            console.log(fname, lname, dob);
+        }
+
+        display(person);
+    </script>
+</body>
+
+</html>

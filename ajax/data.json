@@ -1,0 +1,11 @@
+{
+    "persons": [
+
+        { "name": "Iqbal", "age": 23, "hometown": "Cumilla" },
+        { "name": "sunny", "age": 24, "hometown": "jassor" },
+        { "name": "alhaj", "age": 22, "hometown": "rajbari" },
+        { "name": "aminul", "age": 21, "hometown": "tangail" },
+        { "name": "imran", "age": 25, "hometown": "noakhali" }
+    ]
+
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sub Class in JS</title>
+</head>
+
+<body>
+
+    <script>
+        class Person {
+            constructor(fname, lname) {
+                this.firstname = fname;
+                this.lastname = lname;
+            }
+
+            greeting() {
+                console.log(`Hello ${this.firstname} ${this.lastname}! `);
+            }
+
+            static test() {
+                console.log("I am static");
+            }
+
+        }
+
+        class Customer extends Person { ///sub class
+            constructor(fname, lname, phone, memberShip) {
+                super(fname, lname);
+
+                this.phone = phone;
+                this.memberShip = memberShip;
+            }
+        }
+
+
+
+
+
+
+        let person1 = new Person("Ikbal", "Hasan");
+        person1.greeting();
+        //   person1.test(); //not work
+        Person.test(); //static method have to be called by class name.........
+
+        let customer1 = new Customer("Sunny", "Mia", "0184234234", "001");
+        console.log(customer1);
+        customer1.greeting();
+    </script>
+
+</body>
+
+</html>

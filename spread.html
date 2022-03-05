@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "Ikbal";
+        let newStr = [...str]; // convert string to array
+        console.log(newStr);
+
+
+        let fruit1 = ["apple", "pine-apple", "mango"];
+        let fruit2 = ["orange", "grap"];
+        let fruit3 = ["jackfruit"];
+
+        let newFruit = [...fruit1, ...fruit2, ...fruit3]; // combined all array into one array
+        console.log(newFruit);
+
+
+        let person = {
+            fname: "Ikbal",
+            lname: "Hasan",
+
+        }
+
+        let newPerson = {
+            ...person
+        };
+        console.log(newPerson);
+
+        newPerson = {
+            ...person,
+            dob: "15-01-199"
+        };
+        console.log(newPerson);
+    </script>
+</body>
+
+</html>

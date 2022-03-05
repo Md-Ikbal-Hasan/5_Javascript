@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+
+<body>
+
+
+    <script>
+        let numbers = [12, 34, 56, 78, 90, 23, 121];
+        let len = numbers.length;
+        for (let i = 0; i < len; i++) {
+            console.log(numbers[i]);
+        }
+
+        console.log("Foreach function"); // foreach is a array method
+        numbers.forEach((value, index) => {
+            console.log(index + " -> " + value);
+
+        });
+        console.log("First loop end");
+
+
+        let name = "I am Ikbal";
+        let food = ["cake", "chocolate", "ICe Cream", "Mango"];
+        let player = {
+            name: "Shakib Al Hasan",
+            profession: "Cricketer",
+            team: "Bangladesh",
+            age: 35
+        }
+
+
+
+        //for in (index)....... work for string ,array,object
+        for (var x in name) {
+            console.log(`index ${x} => ${name[x]}`);
+        }
+        console.log("2nd loop end");
+
+        for (var x in food) {
+            console.log(`index ${x} => ${food[x]}`);
+        }
+        console.log("3rd loop end");
+
+        for (var x in player) {
+            console.log(`index ${x} => ${player[x]}`);
+        }
+        console.log("4th loop end");
+
+
+        //for of (value)..... work for string ,array but not for object
+        for (var x of name) {
+            console.log(x);
+        }
+        console.log("5th loop end");
+        for (var x of food) {
+            console.log(x);
+        }
+        console.log("6th loop end");
+        /*
+        for (var x of player) { // not work in object
+            console.log(x);
+        }
+        */
+    </script>
+
+</body>
+
+</html>

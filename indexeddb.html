@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indexed Db Practice</title>
+    <style>
+        .btn {
+            padding: .5em 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">Add Data</button>
+
+
+    <script>
+        let companies =
+            ` [
+                {
+                    "name": "The Victorians",
+                    "employee": 2300,
+                    "ceo": "iqbal",
+                    "favrt" : ["red" ,"green","black"]
+                },
+                {
+                    "name": "The Dreamer",
+                    "employee": 20,
+                    "ceo": "Bijoy",
+                    "fvr" :"red",
+                    "sell": [{"year":2019, "profit":120000} ,
+                            {"year":2020, "profit":130000} ,
+                            {"year":2021, "profit":140000} ,
+                            {"year":2022, "profit":150000} ]
+                }
+            ]`
+
+
+        let x = JSON.parse(companies);
+        const request = indexedDB.open("myDatabase");
+
+        request.onupgradeneeded = e => {
+            let db = request.result;
+            console.log("db = " + db);
+            let store = db.createObjectStore("book", { autoIncrement: true });
+
+            store.put(x[0]);
+            store.put({ title: "C++", author: "Bijoy" });
+        }
+
+        request.onsuccess = e => {
+            if (request.readyState == "done") {
+                console.log("data inserted...");
+            }
+        }
+
+        request.onerror = e => {
+            alert("error !");
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving</title>
+</head>
+
+<body>
+    <script>
+        function linearSearch(arr, val) {
+            let len = arr.length;
+            for (let i = 0; i < len; i++) {
+                if (arr[i] === val)
+                    return i;
+            }
+            return "not found";
+        }
+
+        console.log(linearSearch(['a', 'b', 'c', 'd', 'e'], 'b'))
+    </script>
+
+</body>
+
+</html>

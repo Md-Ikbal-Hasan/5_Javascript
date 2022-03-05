@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+
+</head>
+
+<body>
+    <script>
+
+        let companies =
+            ` [
+                {
+                    "name": "The Victorians",
+                    "employee": 2300,
+                    "ceo": "iqbal",
+                    "favrt" : ["red" ,"green","black"]
+                },
+                {
+                    "name": "The Dreamer",
+                    "employee": 20,
+                    "ceo": "Bijoy",
+                    "fvr" :"red",
+                    "sell": [{"year":2019, "profit":120000} ,
+                            {"year":2020, "profit":130000} ,
+                            {"year":2021, "profit":140000} ,
+                            {"year":2022, "profit":150000} ]
+                }
+            ]`
+
+
+        let x = JSON.parse(companies);
+        console.log(typeof (x));
+        console.log(x[1].sell[0].profit);
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

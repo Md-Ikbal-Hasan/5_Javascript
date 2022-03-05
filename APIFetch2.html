@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+
+<body>
+
+    <div id="get_data">
+        <button>Get Data</button>
+        <div id="output"> </div>
+    </div>
+
+    <script>
+        document.getElementById("get_data").addEventListener("click", getData);
+
+        function getData() {
+            fetch('http://api.icndb.com/jokes/random')
+                .then(function(res) {
+                    return (res.json());
+                })
+
+            .then(function(data) {
+                    console.log(data.value.joke);
+                })
+                .catch(function(err) {
+                    console.log(err);
+                })
+        }
+    </script>
+
+</body>
+
+</html>

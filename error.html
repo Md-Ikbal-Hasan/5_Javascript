@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("before error");
+        try {
+            test();
+
+        } catch (err) {
+            //console.log(err);
+            console.log(err.message);
+            console.log(err.name);
+
+        } finally {
+            console.log("I am inside finally");
+        }
+
+
+        console.log("After error\n \n");
+
+        let a = 3;
+
+        try {
+            if (a > 15) throw "Too big";
+            else if (a < 5) throw "Too samll";
+        } catch (err) {
+            console.log(err);
+        }
+    </script>
+
+</body>
+
+</html>
