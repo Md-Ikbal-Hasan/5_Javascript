@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+    </table>
+
+
+    <script>
+        var mainObj = [
+            {
+                name: "Kapil",
+                age: 21,
+                status: "Active"
+            },
+            {
+                name: "John",
+                age: 28,
+                status: "Inactive"
+            },
+            {
+                name: "Deos",
+                age: 18,
+                status: "Active"
+            }
+        ];
+        var k = '<tbody>'
+        for (i = 0; i < mainObj.length; i++) {
+            k += '<tr>';
+            k += '<td>' + mainObj[i].name + '</td>';
+            k += '<td>' + mainObj[i].age + '</td>';
+            k += '<td>' + mainObj[i].status + '</td>';
+            k += '</tr>';
+        }
+        k += '</tbody>';
+        document.getElementById('tableData').innerHTML = k;
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selection</title>
+</head>
+<body>
+
+    <h2 id="ul-title">Unorder list</h2>
+
+    <ul id="list" class="ul-list">
+        <li class="single-item">Item One</li>
+        <li class="single-item">Item two</li>
+        <li class="single-item">Item Three</li>
+        <li class="single-item">Item Four</li>
+    </ul>
+
+    <h2>Paragraphs</h2>
+
+    <p class="paragraph">First paragraph</p>
+    <p class="paragraph">Second paragraph</p>
+    <p class="paragraph">Third paragraph</p>
+
+
+
+    <script>
+        // const ulHeading = document.getElementById('ul-title');
+        // console.log(ulHeading);
+        // ulHeading.textContent = 'Hello;'
+        // console.log(document.getElementById('list'));
+
+
+        // const para = document.getElementsByTagName('p');
+        // para[0].style.color = 'red';
+        // console.log(para);
+
+
+        // const listItem = document.getElementsByClassName('single-item');
+        // listItem[0].style.color = 'red';
+        // console.log(listItem);
+
+        // const para  = document.querySelector('.pragraph');
+        // console.log(para.outerHTML);
+        // para.innerHTML = "This is first paragraph";
+
+        // const list  = document.querySelector('ul#list');
+        // console.log(list.childNodes);
+        // console.log(list.childNodes[1]);
+
+
+        const list  = document.querySelector('ul#list');
+        console.log(list.children);
+        console.log(list.children[2].innerHTML);
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literal</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName : "Md Ikbal",
+            lastName : "Hosen",
+            age : 23,
+            email: 'ikbal@gmail.com',
+            address : {
+                city : "Cumilla",
+                upozilla : "Daudkandi"
+            },
+            getBirthYear : function(){
+                return 2022 - this.age;
+            }
+
+        }
+
+        // console.log(person.firstName + " " +  person.lastName);
+        // console.log(person.email);
+        // console.log(person.getBirthYear());
+
+
+
+
+        const peoples = [
+            {name:"Md Ikbal" , age : 25 , address: {city: 'Dhaka' , post_office: 'Rupnagra' } },
+            {name : 'Sharial' , age  : 24 , hobby: 'Playing Cricket'},
+            {name : 'Mubin' ,age : 23 }
+        ];
+
+
+        for(let i=0 ; i<peoples.length ; i++){
+            // console.log(peoples[i].name  + " " + peoples[i].age);
+            // for(let j = 0; j< peoples[i].length; j++){
+            //     console.log(peoples[i][j] + " , ")
+            // }
+            // console.log("\n");
+
+        }
+
+        peoples.forEach( people =>{
+            for(let key in people){
+                console.log( `${key} : ${people[key]} ` );
+            }
+            console.log("\n");
+
+        }  )
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

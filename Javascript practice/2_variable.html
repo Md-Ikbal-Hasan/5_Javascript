@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variable</h1>
+    <script>
+        console.log("var keyword =========> ")
+        var x = "Hello";
+        console.log(x); //hello
+        var x; 
+        console.log(x);  //hello
+        x = "welocome";
+        console.log(x); //welcome
+
+        {
+            console.log("In Scope: ")
+            console.log(x)
+            var x = 'welcome2';
+            console.log(x)
+        }
+        console.log(x)
+
+
+
+
+        console.log("let keyword ==========> ")
+        y = "Ikbal"
+        console.log(y);
+        // let y = "Rahim";  ?? cant possible
+        // console.log(y);
+        {
+            console.log("In Scope: ")
+            let y = 'ikbal2';
+            console.log(y)
+            y = 'ikbal3';
+            console.log(y)
+        }
+
+        {
+            let y = "ikbal4"
+            console.log(y) //ikbal4
+        }
+        console.log(y) //ikbal
+
+
+
+        console.log("constant keyword =========> ")
+        const pi = 3.141592653
+        console.log(pi);
+        // pi = 3.14 //error
+        {
+            
+            const pi = 3.1416
+            console.log(pi)
+        }
+        console.log(pi)
+
+
+        const arr = [0,1,2,3,4,5]
+        console.log(arr)
+        arr[2] = 22
+        arr.push(6)
+        console.log(arr)
+        // arr = [0,1,2,333,4,5] //error
+        console.log(arr)
+
+
+        let arr2 = [0,11,22,33,44,55];
+        console.log(arr2)
+        arr2[2]  = 22222
+        console.log(arr2)
+        arr2 = [1,2,3,4,5]
+        console.log(arr2)
+
+        console.log(2**4) // 2^4 = 16
+
+
+
+
+    
+    </script>
+</body>
+</html>

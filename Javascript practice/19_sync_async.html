@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronus vs Asynchronous</title>
+</head>
+<body>
+    <h1>Synchronus vs Asynchronous</h1>
+
+    <script>
+
+      const task1 = () =>{
+        console.log("Task 1");
+      }
+      const task2 = () =>{
+
+        // setTimeout() is asynchronous function
+        setTimeout( ()=>{
+            console.log("Task 2. Data Loading....");
+        },2000 )  
+        
+      }
+      const task3 = () =>{
+        console.log("Task 3");
+      }
+      const task4 = () =>{
+        console.log("Task 4");
+      }
+      const task5 = () =>{
+        console.log("Task 5");
+      }
+
+
+      task1();
+      task2();
+      task3();
+      task4();
+      task5();
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

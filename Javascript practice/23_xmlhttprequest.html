@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API calling using XMLHTTPRequest</title>
+</head>
+
+<body>
+    <h3> API calling using XMLHTTPRequest </h3>
+
+    <script>
+        const makeRequest = (method, url, data) => {
+
+            const xhr = new XMLHttpRequest();
+            // xhr.open('GET','https://jsonplaceholder.typicode.com/posts', true);
+
+            xhr.open(method, url);
+
+            xhr.setRequestHeader('content-Type', 'application/json')
+
+            xhr.onload = () => {
+                let data = xhr.response;
+                console.log(JSON.parse(data)); // JSON to Js_object
+            }
+
+            xhr.onerror = () => {
+                console.log('error occured');
+            }
+
+            xhr.send(JSON.stringify(data)); // js_object to json
+        }
+
+
+
+        const getData = () => {
+            makeRequest('GET', 'https://jsonplaceholder.typicode.com/posts');
+        }
+
+
+        const sendData = () => {
+            makeRequest('POST', 'https://jsonplaceholder.typicode.com/posts', {
+                title: 'foo',
+                body: 'bar',
+                userId: 1,
+            });
+        }
+
+
+        const updateData = () => {
+            makeRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
+                id: 1,
+                title: 'foo boo',
+                body: 'bar',
+                userId: 1,
+            });
+        }
+
+        const updateSingleData = () => {
+            makeRequest('PATCH', 'https://jsonplaceholder.typicode.com/posts/1', {
+
+                title: 'Only title updated',
+               
+            });
+        }
+
+        const deleteData = () => {
+            makeRequest('DELETE', 'https://jsonplaceholder.typicode.com/posts/1', );
+        }
+
+        
+
+
+        // getData();
+
+        // sendData();
+
+        updateData();
+
+        // updateSingleData();
+
+        // deleteData()
+
+
+    </script>
+
+</body>
+
+</html>

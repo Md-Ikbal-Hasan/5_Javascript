@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+
+<body>
+    <h1>Callback</h1>
+
+   
+    <script>
+
+        
+
+
+
+        // function square(x){
+        //     console.log( `square of ${x}: ${x * x}`);
+        // }
+
+        // // square(5);
+        // // y = square
+        // // y(6)
+
+        // function higherOrderFunction(num,Callback){
+        //     square(num);
+        // }
+
+        // higherOrderFunction(7,square);
+
+
+        const taskOne = (Callback) =>{
+          console.log("Task 1");
+          Callback();
+        }
+
+        const taskTwo = (Callback) =>{
+          setTimeout( ()=>{
+              console.log("Task 2. Data Loading....");
+              Callback();
+          },2000 )  
+          
+        }
+
+        const taskThree = (Callback) =>{
+          console.log("Task 3");
+          Callback();
+        }
+
+        const taskFour = (Callback) =>{
+          console.log("Task 4");
+          Callback()
+        }
+
+        const taskFive = () =>{
+          console.log("Task 5");
+        }
+  
+  
+        taskOne( ()=>{
+            taskTwo( ()=>{
+                taskThree(()=>{
+                    taskFour( ()=>{
+                        taskFive();
+                    } )
+                } )
+            } );
+        } )
+
+      
+       
+  
+  
+  
+
+      </script>
+
+</body>
+
+</html>

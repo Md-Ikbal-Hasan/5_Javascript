@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage API</title>
+</head>
+<body>
+
+    <h2>Web Storage API</h2>
+
+    <script>
+
+        // Local Storage............
+
+        // localStorage.setItem("userName" , "md ikbal hosen");
+        // localStorage.setItem("password" , "1234567890");
+
+        // const userName  = localStorage.getItem("userName");
+        // const userPassword  = localStorage.getItem("password");
+        // console.log(userName,userPassword);
+
+        // localStorage.setItem("userName" , "md bijoy");
+        // localStorage.setItem("password" , "345234");
+       
+
+        // localStorage.removeItem("userName");
+
+
+        // const countries = ["Bangladesh","Canada","USA"];
+        // localStorage.setItem("country" , JSON.stringify(countries)); // object to json
+
+        // const countriesList   = JSON.parse(localStorage.getItem('country')); // json to object
+        // console.log(countriesList);
+
+        // localStorage.clear();
+
+
+
+
+
+
+         // Session Storage............
+         sessionStorage.setItem("userName"  ,"Ikbal");
+         sessionStorage.setItem("password"  ,"5678");
+
+         const userName = sessionStorage.getItem("userName");
+         console.log(userName);
+
+         sessionStorage.removeItem("userName");
+         sessionStorage.clear();
+
+
+         //cookies............
+         document.cookie = "username=iqballl; expires= Tue, 28 Jun 2022 7:14 GMT; path=/ ";
+
+
+
+       
+        
+
+
+
+
+        
+       
+
+
+
+    </script>
+    
+</body>
+</html>

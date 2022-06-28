@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+
+    <script>
+        const persons = [
+            {
+                firstName: 'Md Ikbal',
+                lastName: "Hosen",
+                age: 25,
+                fullName: function () {
+                    return this.firstName + " " + this.lastName;
+                }
+            },
+            {
+
+                firstName: 'Md Alhaj',
+                lastName: "Hosen",
+                age: 23,
+                fullName: function () {
+                    return this.firstName + " " + this.lastName;
+                },
+
+            }];
+
+
+        persons.forEach((person) => {
+            for (let key in person) {
+                console.log(key + " : " + person[key])
+            }
+        })
+
+        // console.log(persons[0].firstName, persons[0].age);
+        // console.log(persons[0].fullName())
+
+    </script>
+</body>
+
+</html>

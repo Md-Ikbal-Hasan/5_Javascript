@@ -7,6 +7,7 @@ var student = {
 
 var student_json = JSON.stringify(student); //js object to  json string
 console.log(student_json);
+
 console.log(typeof(student_json));
 
 

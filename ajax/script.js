@@ -6,7 +6,7 @@ function loadData() {
 
 
     //open
-    xhr.open('GET', 'data.txt', true) // kon file theke data anbo ta bolte hobe
+    xhr.open('GET', 'http://127.0.0.1:8000/stuinfo/', true) // kon file theke data anbo ta bolte hobe
     xhr.send();
 
     xhr.onload = function() {

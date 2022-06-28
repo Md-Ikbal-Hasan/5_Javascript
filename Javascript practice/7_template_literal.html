@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literal</title>
+</head>
+
+<body>
+
+
+    <script>
+        const name = "Ikbal";
+        const age = 25;
+        const job = 'Software Developer';
+        const city = "Cumilla";
+        let html;
+
+        // old style....
+        // html = "<ul>" +
+        //     " <li> Name:" + name + "</li>" +
+        //     " <li> Age:" + age + "</li>" +
+        //     " <li> Job:" + job + "</li>" +
+        //     " <li> City:" + city + "</li>" +
+        //     " </ul> ";
+
+
+
+
+        // with template string es6
+
+        html = `
+
+        <ul>
+            <li> Name : ${name} </li>
+            <li> Age : ${age} </li>
+            <li> Job : ${job} </li>
+            <li> City : ${city} </li>
+        </ul>
+        `
+        document.body.innerHTML = html;
+        console.log(html);
+    </script>
+</body>
+
+</html>

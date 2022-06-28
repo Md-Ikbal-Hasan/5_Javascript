@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Axios cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+        integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Axios</title>
+</head>
+
+<body>
+
+    <h2>API Calling using Axios</h2>
+
+    <script>
+        // axios.post("https://jsonplaceholder.typicode.com/posts", {
+        //     method: 'POST',
+        //     body: JSON.stringify({
+        //         title: 'foo maaa',
+        //         body: 'bar',
+        //         userId: 1,
+        //     }),
+
+        // })
+        //     .then((res) => {
+        //         console.log(res.data);
+        //     })
+        //     .catch((err) => {
+        //         console.log(err);
+        //     })
+
+
+        const makeRequest = async (config) => {
+            return await axios(config);
+        };
+
+        const getData = () => {
+            makeRequest("https://jsonplaceholder.typicode.com/posts")
+                .then((res) => { console.log(res) })
+                .catch((err) => { console.log(err.message) });
+        };
+
+        getData();
+
+
+        const createdData = () => {
+            makeRequest({
+                url: "https://jsonplaceholder.typicode.com/posts",
+                method: 'POST',
+                data: JSON.stringify({
+                    title: 'foo maaaaaaaa',
+                    body: 'bar maaaaaa',
+                    userId: 1,
+                })
+            })
+                .then((res) => { console.log(res) })
+                .catch((err) => { console.log(err.message) });
+        };
+
+        // createdData();
+
+
+        const updatedData = () => {
+            makeRequest({
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                method: 'PUT',
+                data: JSON.stringify({
+                    id: 1,
+                    title: 'foo update',
+                    body: 'bar update',
+                    userId: 1,
+                })
+            })
+                .then((res) => { console.log(res) })
+                .catch((err) => { console.log(err.message) });
+        };
+
+        // updatedData();
+
+
+
+        const partialUpdatedData = () => {
+            makeRequest({
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                method: 'PUT',
+                data: JSON.stringify({
+                  
+                    title: 'foo partial update',
+                    
+                })
+            })
+                .then((res) => { console.log(res) })
+                .catch((err) => { console.log(err.message) });
+        };
+
+        // partialUpdatedData();
+
+
+
+        const deleteData = () => {
+            makeRequest({
+                url: "https://jsonplaceholder.typicode.com/posts/1",
+                method: 'DELETE',
+            })
+                .then((res) => { console.log(res) })
+                .catch((err) => { console.log(err.message) });
+        };
+
+        // deleteData();
+
+
+    </script>
+
+</body>
+
+</html>
